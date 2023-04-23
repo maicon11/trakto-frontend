@@ -1,0 +1,13 @@
+<div class="min-h-screen flex items-center justify-center bg-light1">
+  <div class="max-w-md px-5 py-5">
+    <img src="./assets/img/visual_identity/logo.svg" class="mb-5" />
+    <h2 class="text-neutral-darkest text-lg font-bold leading-snug my-5">
+      Olá, faça login em sua conta.
+    </h2>
+    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()" id="loginForm">
+      <app-input type="text" label="E-mail" class="w-full" [control]="loginForm.controls.email" />
+      <app-input type="password" label="Senha" class="w-full" [control]="loginForm.controls.password" />
+      <app-button class="w-full" type="submit" text="Entrar"/>
+    </form>
+  </div>
+</div>
